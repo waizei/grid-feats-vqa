@@ -33,7 +33,7 @@ dataset_to_folder_mapper['coco_2014_val'] = 'val2014'
 dataset_to_folder_mapper['coco_2015_test'] = 'test2015'
 dataset_to_folder_mapper['tvqa'] = 'tvqa'
 
-pooling = torch.nn.AdaptiveMaxPool2d((7,7))
+pooling = torch.nn.AdaptiveAvgPool2d((7,7))
 def extract_grid_feature_argument_parser():
     parser = argparse.ArgumentParser(description="Grid feature extraction")
     parser.add_argument("--config-file", default="", metavar="FILE", help="path to config file")
